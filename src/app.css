@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root {
+  box-sizing: border-box;
+
+  font-size: 16px;
+
+
+  --background-color: #f2f2f2;
+
+  --text-color: #0d0d0d;
+  --text-color-faded: #8d8d8d;
+
+  --link-color: #2244ee;
+}
+
+body {
+  
+  margin: 0;
+  display: grid;
+  grid-template:
+    [pagetop headertop] ". main" 8rem [headerbottom]
+    [maintop] "sidestuff main" auto [mainbottom]
+    [footertop] ". footer" 6rem [footerbottom pagebottom]
+      /
+    [pageleft sideleft] 25% [sideright mainleft] auto [mainright pageright];
+  gap: 20px;
+
+  min-height: 100vh;
+
+
+  font-family: 'Lato', sans-serif;
+
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+
+
+
+
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+
+
+main {
+  grid-area: main;
+  
+
+  article {
+
+    margin: 0;
+    max-width: 40rem;
+
+    h1 {
+      margin: 1rem 0 1rem;
+      /* grid-area: title; */
+      /* align-self: end; */
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+
+    .w-100 {
+      width: 100%;
+    }
+
+  }
+}
+
+a {
+  
+  text-decoration: none;
+}

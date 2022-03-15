@@ -1,0 +1,30 @@
+<script>
+import katexify from '$lib/katexify'
+import approxFrac from '$lib/approxFrac'
+
+const age = (((new Date().getTime() / 1000) - 614944800.0) / 31557600).toFixed(6)
+const ageWhole = Math.floor(parseFloat(age))
+const ageFrac = approxFrac(parseFloat(age) - Math.floor(parseFloat(age)))
+
+const kAge = `${ageWhole}\\frac{${ageFrac.n}}{${ageFrac.d}}`
+
+</script>
+
+
+# about me
+
+Hi, I'm Eli.
+
+I am {@html katexify(kAge)} years old.
+
+I was born in New Orleans, Louisiana, United States, and moved around the country until I settled in central Indiana, just north of Indianapolis.
+
+As an undergraduate I studied cognitive science and philosophy of science at Indiana University (Bloomington) from '07 through '011. Following this, from mid-2013 to early '016 I lived in the Netherlands earning a [MSc in Logic](https://msclogic.illc.uva.nl/) from the University of Amsterdam.
+
+Since graduating from my master's program I've more or less spent the time around Indianapolis teaching programming and trying to work out what my next steps will be.
+
+I also have a dog named Shannon (after [Claude](https://en.wikipedia.org/wiki/Claude_Shannon)).
+<!-- <img src="@/assets/img/shannon0.gif"/> -->
+<video autoplay loop class="w-100">
+  <source src="static/img/shannon0.mp4" type="video/mp4">
+</video>

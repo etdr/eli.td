@@ -1,0 +1,32 @@
+<script>
+
+const counts = [
+  4132, 4684, 4177, 4351, 4072,
+  3795, 4137, 4401, 4063, 4188
+]
+
+function digitToRandUrl (d) {
+  const picNum = Math.floor(Math.random() * counts[d])
+  return `static/trainingSet/${d}/${picNum.toString().padStart(4, '0')}.jpg`
+}
+
+const digits = '8082008440'.split('')
+
+const urls = digits.map(digitToRandUrl)
+
+</script>
+
+# contact me
+
+
+## my first name at this site (email)
+
+
+
+<!-- {#each digits as d, i}
+<img alt="{d}" src="{urls[i]}">
+{/each} -->
+
+## (<img alt="{digits[0]}" src="{urls[0]}"><img alt="{digits[1]}" src="{urls[1]}"><img alt="{digits[2]}" src="{urls[2]}">) <img alt="{digits[3]}" src="{urls[3]}"><img alt="{digits[4]}" src="{urls[4]}"><img alt="{digits[5]}" src="{urls[5]}">--<img alt="{digits[6]}" src="{urls[6]}"><img alt="{digits[7]}" src="{urls[7]}"><img alt="{digits[8]}" src="{urls[8]}"><img alt="{digits[9]}" src="{urls[9]}">
+
+
