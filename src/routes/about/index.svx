@@ -2,11 +2,20 @@
 import katexify from '$lib/katexify'
 import approxFrac from '$lib/approxFrac'
 
-const age = (((new Date().getTime() / 1000) - 614944800.0) / 31557600).toFixed(6)
-const ageWhole = Math.floor(parseFloat(age))
-const ageFrac = approxFrac(parseFloat(age) - Math.floor(parseFloat(age)))
+function getKatexifiedAge () {
+  const age = (((new Date().getTime() / 1000) - 614944800.0) / 31557600).toFixed(7)
+  const ageWhole = Math.floor(parseFloat(age))
+  const ageFrac = approxFrac(parseFloat(age) - Math.floor(parseFloat(age)))
 
-const kAge = `${ageWhole}\\frac{${ageFrac.n}}{${ageFrac.d}}`
+  const kAge = `${ageWhole}\\frac{${ageFrac.n}}{${ageFrac.d}}`  
+
+  return katexify(kAge)
+}
+
+let kAgeHTML = getKatexifiedAge()
+
+setInterval(() => { kAgeHTML = getKatexifiedAge() }, 500)
+
 
 </script>
 
@@ -15,7 +24,7 @@ const kAge = `${ageWhole}\\frac{${ageFrac.n}}{${ageFrac.d}}`
 
 Hi, I'm Eli.
 
-I am {@html katexify(kAge)} years old.
+I am {@html kAgeHTML} years old.
 
 I was born in New Orleans, Louisiana, United States, and moved around the country until I settled in central Indiana, just north of Indianapolis.
 

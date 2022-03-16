@@ -1,0 +1,3 @@
+[submodule "static/res-yaml"]
+	path = static/res-yaml
+	url = git@github.com:etdr/res-yaml.git
