@@ -15,8 +15,8 @@ import '../app.css'
       </ul>
     {/if}
   </li>
-  <li>résumé</li>
-  <li>links</li>
+  <li><a href="/resume">résumé</a></li>
+  <li><a href="/profiles">profiles</a></li>
   <li><a href="/contact">contact</a></li>
 </ul>
 

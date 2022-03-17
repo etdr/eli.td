@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Mono&display=swap');
 
 
 :root {
@@ -55,6 +55,9 @@ h1 {
 main {
   grid-area: main;
   
+  h1 {
+    margin: 1rem 0;
+  }
 
   article {
 

@@ -13,7 +13,7 @@ const approxFrac1 = (e, n) => {
 // alternative using Stern-Brocot
 // https://stackoverflow.com/questions/5124743/algorithm-for-simplifying-decimal-to-fractions
 
-const error = 0.00000001
+const error = 0.0000001
 
 function approxFrac2 (x) {
 
