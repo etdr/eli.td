@@ -2,7 +2,7 @@
   "name": "eli.td",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "svelte-kit dev --host",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
@@ -24,6 +24,7 @@
     "@sveltejs/adapter-node": "^1.0.0-next.71",
     "@sveltejs/adapter-static": "^1.0.0-next.29",
     "katex": "^0.15.3",
+    "postcss-inline-media": "^1.4.0",
     "rehype-katex-svelte": "^1.0.3",
     "remark-math": "^3"
   }

@@ -88,10 +88,12 @@ ul {
         line-height: 1.4rem;
 
         &::after {
+          font-style: normal;
           content: " ┤";
         }
 
         &:last-child::after {
+          font-style: normal;
           content: " ┘";
         }
       }
