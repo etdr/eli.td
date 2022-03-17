@@ -22,6 +22,7 @@
   "type": "module",
   "dependencies": {
     "@sveltejs/adapter-node": "^1.0.0-next.71",
+    "@sveltejs/adapter-static": "^1.0.0-next.29",
     "katex": "^0.15.3",
     "rehype-katex-svelte": "^1.0.3",
     "remark-math": "^3"

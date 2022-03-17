@@ -3,17 +3,17 @@
 
 # profiles
 
-- [![GitHub](../../static/icons/github.svg) etdr](https://github.com/etdr)
-- [![LinkedIn](../../static/icons/linkedin.svg) etdru](https://www.linkedin.com/in/etdru/)
-- [![Discord](../../static/icons/discord.svg) etdr#3050](https://discord.com/channels/@me/910519796129468466)
-- [![Telegram](../../static/icons/telegram.svg) @etdru](https://t.me/etdru)
-- [![Spotify](../../static/icons/spotify.svg) dte.li](https://open.spotify.com/user/dte.li)
-- [![last.fm](../../static/icons/lastfm.svg) eliium](https://www.last.fm/user/eliium)
-- [![TikTok](../../static/icons/tiktok.svg) @eli.td](https://www.tiktok.com/@eli.td)
-- [![Twitch](../../static/icons/twitch.svg) etdr](https://www.twitch.tv/etdr)
-- [![Steam](../../static/icons/steam-circle.svg) etdru](https://steamcommunity.com/id/etdru)
-- [![Twitter](../../static/icons/twitter.svg) @esalalumbo](https://twitter.com/esalalumbo)
-- [![Facebook](../../static/icons/facebook.svg) etdru](https://www.facebook.com/etdru/)
+- [![GitHub](/static/icons/github.svg) etdr](https://github.com/etdr)
+- [![LinkedIn](/static/icons/linkedin.svg) etdru](https://www.linkedin.com/in/etdru/)
+- [![Discord](/static/icons/discord.svg) etdr#3050](https://discord.com/channels/@me/910519796129468466)
+- [![Telegram](/static/icons/telegram.svg) @etdru](https://t.me/etdru)
+- [![Spotify](/static/icons/spotify.svg) dte.li](https://open.spotify.com/user/dte.li)
+- [![last.fm](/static/icons/lastfm.svg) eliium](https://www.last.fm/user/eliium)
+- [![TikTok](/static/icons/tiktok.svg) @eli.td](https://www.tiktok.com/@eli.td)
+- [![Twitch](/static/icons/twitch.svg) etdr](https://www.twitch.tv/etdr)
+- [![Steam](/static/icons/steam-circle.svg) etdru](https://steamcommunity.com/id/etdru)
+- [![Twitter](/static/icons/twitter.svg) @esalalumbo](https://twitter.com/esalalumbo)
+- [![Facebook](/static/icons/facebook.svg) etdru](https://www.facebook.com/etdru/)
 
 
 

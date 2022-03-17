@@ -1,6 +1,6 @@
 
 <script>
-import resString from '../../static/res-yaml/res.yaml?raw'
+import resString from '/static/res-yaml/res.yaml?raw'
 
 // import { highlight } from 'prismjs'
 // import yamlize from 'prismjs/components/prism-yaml.min.js'
