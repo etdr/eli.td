@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Mono&display=swap');
 
+/* breakpoint variables */
+$x: (max-width: 1240px);
+$l: (max-width: 1024px);
+$m: (max-width: 780px);
+$s: (max-width: 660px);
 
 :root {
   box-sizing: border-box;
@@ -86,3 +91,5 @@ a {
   
   text-decoration: none;
 }
+
+

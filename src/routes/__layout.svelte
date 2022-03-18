@@ -4,6 +4,8 @@ import { page } from '$app/stores'
 import '../app.css'
 </script>
 
+<div id="leftside"></div>
+
 <ul>
   <li><a href="/">etd</a></li>
   <li>
@@ -31,6 +33,26 @@ import '../app.css'
 
 
 <style lang="postcss">
+
+:global(:root) {
+  /* breakpoint variables */
+  $x: (max-width: 1240px);
+  $l: (max-width: 1024px);
+  $m: (max-width: 780px);
+  $s: (max-width: 660px);
+}
+
+div#leftside {
+  grid-column-start: sideleft;
+  grid-column-end: sideright;
+  grid-row-start: pagetop;
+  grid-row-end: pagebottom;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--text-color);
+}
+
 ul {
   grid-area: sidestuff;
   padding-inline-start: 0;
@@ -38,6 +60,7 @@ ul {
   margin: 0 1rem 0 0;
   display: flex;
   flex-direction: column;
+  color: #f2f2f2;
 
   li {
     list-style: none;
@@ -56,7 +79,7 @@ ul {
     } */
     
     a {
-      color: var(--text-color);
+      color: var(--background-color);
       &:hover {
         &::before {
           content: "🢩 ";

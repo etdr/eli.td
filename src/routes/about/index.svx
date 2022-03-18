@@ -38,4 +38,5 @@ I also have a dog named Shannon (after [Claude](https://en.wikipedia.org/wiki/Cl
 <!-- <img src="@/assets/img/shannon0.gif"/> -->
 <video autoplay loop class="w-100">
   <source src={shannonVid} type="video/mp4">
+  <track default src="/static/img/shannon0.vtt" kind="captions">
 </video>
