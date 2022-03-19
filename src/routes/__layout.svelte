@@ -2,7 +2,11 @@
 import { page } from '$app/stores'
 
 import '../app.css'
+
+import Colorbar from '../components/Colorbar.svelte'
 </script>
+
+<Colorbar />
 
 <div id="leftside"></div>
 
@@ -50,7 +54,7 @@ div#leftside {
   width: 100%;
   height: 100%;
 
-  background-color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 ul {
@@ -66,6 +70,7 @@ ul {
     list-style: none;
     font-size: 1.6rem;
     line-height: 2rem;
+    margin-bottom: 0.6rem;
 
     /* span {
       color: var(--background-color);
@@ -79,7 +84,7 @@ ul {
     } */
     
     a {
-      color: var(--background-color);
+      color: var(--text-color);
       &:hover {
         &::before {
           content: "🢩 ";
@@ -104,11 +109,13 @@ ul {
     ul {
       margin-top: 0.2rem;
       margin-bottom: 0.8rem;
+      color: var(--text-color);
 
       li {
         font-size: 1.2rem;
         font-style: italic;
         line-height: 1.4rem;
+        margin: 0;
 
         &::after {
           font-style: normal;

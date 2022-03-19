@@ -25,12 +25,12 @@ body {
   margin: 0;
   display: grid;
   grid-template:
-    [pagetop headertop] ". main" 8rem [headerbottom]
-    [maintop] "sidestuff main" auto [mainbottom]
-    [footertop] ". footer" 6rem [footerbottom pagebottom]
+    [pagetop headertop] "colorbar . main" 8rem [headerbottom]
+    [maintop] "colorbar sidestuff main" auto [mainbottom]
+    [footertop] "colorbar . footer" 6rem [footerbottom pagebottom]
       /
-    [pageleft sideleft] 25% [sideright mainleft] auto [mainright pageright];
-  gap: 20px;
+    [pageleft cbleft] 2% [cbright sideleft] 20% [sideright mainleft] auto [mainright pageright];
+  gap: 16px;
 
   min-height: 100vh;
 
