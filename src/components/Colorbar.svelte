@@ -1,29 +1,54 @@
 <script>
 // @ts-nocheck
 
-import getStops from '$lib/huesha'
-import { onMount } from 'svelte';
+import * as d3 from 'd3'
 
-let stops = getStops()
+import getStopData from '$lib/huesha'
+import { onDestroy, onMount } from 'svelte'
 
-let sEls
+const stopData = getStopData()
+
+let updateInterval
 
 onMount(() => {
-  sEls = [...document.getElementsByTagName('stop')]
 
+  const cb = d3.select('#colorbar')
 
-  function reStop () {
-    stops = getStops()
+  const stops = cb.selectAll('stop')
 
-    stops.forEach((stop, i) => {
-      sEls[i].style.offset = `${stop[1]}`
-      sEls[i].style.stopColor= `${stop[0]}`
-      
-    })
+  function update () {
+    const t = d3.transition()
+                .duration(1000)
+                .ease(d3.easeExpInOut)
+
+    const sD = getStopData()
+
+    stops.data(sD)
+    stops.transition(t)
+      .attr('offset', d => d[1])
+      .attr('stop-color', d => d[0])
   }
 
-  setInterval(reStop, 1000)
+  updateInterval = setInterval(update, 1000)
+
 })
+
+onDestroy(() => {
+  clearInterval(updateInterval)
+})
+
+// onMount(() => {
+//   sEls = [...document.getElementsByTagName('stop')]
+
+
+//   function reStop () {
+//     stops = getStops()
+
+    
+//   }
+
+//   setInterval(reStop, 1000)
+// })
 </script>
 
 
@@ -32,8 +57,8 @@ onMount(() => {
   <svg height="100%" width="100%">
     <defs>
       <linearGradient id="hg" x1="0%" x2="0%" y1="0%" y2="100%">
-        {#each stops as s, i (i)}
-          <stop id={`hgs${i.toString().padStart(2,'0')}`} offset={s[1]} stop-color={s[0]} />
+        {#each stopData as s, i (i)}
+          <stop id={`hgs${i.toString().padStart(2,'0')}`} class="cb-stop" offset={s[1]} stop-color={s[0]} />
         {/each}
       </linearGradient>
     </defs>
@@ -47,12 +72,6 @@ onMount(() => {
 #colorbar {
   grid-area: colorbar;
 
-  svg {
-    transition: all 1s ease-out;
-  }
-
-  stop {
-    transition: all 1s ease-out;
-  }
 }
+
 </style>

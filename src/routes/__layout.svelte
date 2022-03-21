@@ -1,4 +1,5 @@
 <script>
+import { slide } from 'svelte/transition'
 import { page } from '$app/stores'
 
 import '../app.css'
@@ -15,12 +16,13 @@ import Colorbar from '../components/Colorbar.svelte'
   <li>
     <a href="/about">about</a>
     {#if $page.url.pathname.includes('about')}
-      <ul>
+      <ul transition:slide>
         <li><a href="/about/activities">activities</a></li>
         <li><a href="/about/beliefs">beliefs</a></li>
       </ul>
     {/if}
   </li>
+  <li><a href="/portfolio">portfolio</a></li>
   <li><a href="/resume">résumé</a></li>
   <li><a href="/profiles">profiles</a></li>
   <li><a href="/contact">contact</a></li>
