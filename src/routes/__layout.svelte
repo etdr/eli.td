@@ -89,6 +89,7 @@ ul {
       color: var(--text-color);
       &:hover {
         &::before {
+          font-family: 'Noto Sans Symbols 2', monospace;
           content: "🢩 ";
           color: var(--link-color);
 
@@ -120,11 +121,13 @@ ul {
         margin: 0;
 
         &::after {
+          font-family: 'Noto Sans Mono', monospace;
           font-style: normal;
           content: " ┤";
         }
 
         &:last-child::after {
+          font-family: 'Noto Sans Mono', monospace;
           font-style: normal;
           content: " ┘";
         }
