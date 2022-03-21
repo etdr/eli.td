@@ -20,6 +20,7 @@
 <style lang="postcss">
 ul {
   list-style-type: none;
+  
   li {
     margin: 2rem 0;
     font-size: 3rem;
