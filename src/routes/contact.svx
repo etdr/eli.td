@@ -7,7 +7,7 @@ const counts = [
 
 function digitToRandUrl (d) {
   const picNum = Math.floor(Math.random() * counts[d])
-  return `static/trainingSet/${d}/${picNum.toString().padStart(4, '0')}.jpg`
+  return `/trainingSet/${d}/${picNum.toString().padStart(4, '0')}.jpg`
 }
 
 const digits = '8082008440'.split('')

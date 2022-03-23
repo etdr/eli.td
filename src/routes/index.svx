@@ -9,7 +9,7 @@ import WhatIAm from '/src/components/WhatIAm.svelte'
 
 ## Hi! <span class="regular">I am a<WhatIAm /></span>
 
-![Eli and Shannon](/static/img/me/fernshirt.jpg)
+![Eli and Shannon](/img/me/fernshirt.jpg)
 
 ### <span class="regular">I'm glad you're here.</span>
 

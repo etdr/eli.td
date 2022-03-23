@@ -1,6 +1,4 @@
 <script>
-import shannonVid from '/static/img/shannon0.mp4'
-
 import katexify from '$lib/katexify'
 import approxFrac from '$lib/approxFrac'
 
@@ -37,6 +35,6 @@ Since graduating from my master's program I've more or less spent the time aroun
 I also have a dog named Shannon (after [Claude](https://en.wikipedia.org/wiki/Claude_Shannon)).
 <!-- <img src="@/assets/img/shannon0.gif"/> -->
 <video autoplay loop class="w-100">
-  <source src={shannonVid} type="video/mp4">
-  <track default src="/static/img/shannon0.vtt" kind="captions">
+  <source src="/img/shannon0.mp4" type="video/mp4">
+  <track default src="/img/shannon0.vtt" kind="captions">
 </video>

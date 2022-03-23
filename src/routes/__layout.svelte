@@ -25,7 +25,7 @@ import Colorbar from '../components/Colorbar.svelte'
   </li>
   <li>
     <a href="/out">outputs</a>
-    {#if $page.url.pathname.includes('out')}
+    {#if $page.url.pathname.includes('/out')}
       <ul transition:slide>
         <li><a href="/out/sites">sites</a></li>
         <li><a href="/out/data">data</a></li>
