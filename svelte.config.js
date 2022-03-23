@@ -1,5 +1,6 @@
 import { mdsvex } from 'mdsvex'
 import mdsvexConfig from './mdsvex.config.js'
+import yaml from '@rollup/plugin-yaml'
 import preprocess from 'svelte-preprocess'
 import adapter from '@sveltejs/adapter-node'
 
@@ -12,7 +13,10 @@ const config = {
     vite: {
       server: {
         port: 3000
-      }
+      },
+      plugins: [
+        yaml()
+      ]
     }
   },
 

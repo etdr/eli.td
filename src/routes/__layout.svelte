@@ -1,5 +1,6 @@
 <script>
 import { slide } from 'svelte/transition'
+// @ts-ignore
 import { page } from '$app/stores'
 
 import '../app.css'
@@ -22,7 +23,16 @@ import Colorbar from '../components/Colorbar.svelte'
       </ul>
     {/if}
   </li>
-  <li><a href="/portfolio">portfolio</a></li>
+  <li>
+    <a href="/out">outputs</a>
+    {#if $page.url.pathname.includes('out')}
+      <ul transition:slide>
+        <li><a href="/out/sites">sites</a></li>
+        <li><a href="/out/data">data</a></li>
+        <li><a href="/out/thesis">thesis</a></li>
+      </ul>
+    {/if}
+  </li>
   <li><a href="/resume">résumé</a></li>
   <li><a href="/profiles">profiles</a></li>
   <li><a href="/contact">contact</a></li>
@@ -33,7 +43,7 @@ import Colorbar from '../components/Colorbar.svelte'
 </main>
 
 <footer>
-  ©2022 Eli T. Drumm
+  ©2022 Eli T. Drumm 🞰 <a href="/colophon">about this site</a>
 </footer>
 
 
@@ -91,6 +101,7 @@ ul {
         &::before {
           font-family: 'Noto Sans Symbols 2', monospace;
           content: "🢩 ";
+          line-height: 1rem;
           color: var(--link-color);
 
         }
@@ -134,6 +145,10 @@ ul {
       }
     }
   }
+}
+
+main {
+  max-width: 40rem;
 }
 
 footer {

@@ -1,0 +1,34 @@
+
+
+out:
+
+  sites:
+    type: projects
+    projects:
+      - name: Eksward
+        tagline: a minimal crossword completion app
+        skills:
+          - React with Redux
+          - logic
+          - Express and sequelize
+        description: |
+          I was interested in the NY Times' crossword webapp, which is also written in React, so I figured I would try my hand at it. Maybe the total lack of styling is due to all the work on this going into the actually-pretty-tricky algorithms to create the grids, move the cursor around the board, and light up various squares under certain conditions.
+        url: https://eksward.herokuapp.com/
+        git: https://github.com/etdr/eksward
+        
+      - name: Vloeistof
+        tagline: a mixed drinks manager
+        skills:
+          - Angular
+          - custom styling using Material components
+          - Express and sequelize
+        description: |
+          This was a project I worked on with two fellow students at Eleven Fifty. The name is a Dutch term for alcohol (literally "fluid stuff", in the same way English uses "drink" with an alcoholic connotation sometimes).
+        url: https://vloeistof.herokuapp.com/
+        git: https://github.com/etdr/vloeistof
+
+  data:
+    type: projects
+    projects:
+      - name: the Galactic Predictor
+        tagline: classifying galaxies' morphology from measured features
