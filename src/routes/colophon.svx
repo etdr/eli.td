@@ -3,3 +3,7 @@
 
 tl;dr I made this site.
 
+- Svelte
+- SvelteKit
+- PostCSS
+- 
