@@ -26,9 +26,32 @@ out:
           This was a project I worked on with two fellow students at Eleven Fifty. The name is a Dutch term for alcohol (literally "fluid stuff", in the same way English uses "drink" with an alcoholic connotation sometimes).
         url: https://vloeistof.herokuapp.com/
         git: https://github.com/etdr/vloeistof
+      
+      - name: eli.td
+        tagline: that's right this very site
+        skills:
+          - Svelte with SvelteKit
+          - PostCSS + plugins
+          - custom styling using CSS Grid
 
   data:
     type: projects
     projects:
       - name: the Galactic Predictor
-        tagline: classifying galaxies' morphology from measured features
+        tagline: a set of galaxy morphology classifiers
+        skills:
+          - regressions
+          - random forests
+          - neural networks
+        description: |
+          What I learned from this was that data scientists need to collaborate heavily with professionals from the fields to which they apply their data wizardry.
+      
+      - name: Letterbars
+        tagline: a graphical presentation of letter frequencies
+        skills:
+          - JavaScript
+          - D3.js
+        description: |
+          This was the first anything I ever made in JS, back in 2017. I still don't know how I actually pulled it off. I see at the end of the page I commented some Stack Overflow pages but I'm positive that isn't all I must have looked up (could I have pulled that spread operator on line 176 out of a hat all by myself? no). As a result the code is an obvious mishmash of pre- and post-ES6 JavaScript but I am nonetheless really proud of figuring all this out and putting it together at that point in my life.
+        url: https://etdr.github.io/scrawls/d3/letterbars
+        git: https://github.com/etdr/scrawls/blob/master/d3/letterbars.html

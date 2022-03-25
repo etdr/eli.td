@@ -42,6 +42,7 @@ import Colorbar from '../components/Colorbar.svelte'
   <slot />
 </main>
 
+
 <footer>
   ©2022 Eli T. Drumm 🞰 <a href="/colophon">about this site</a>
 </footer>

@@ -31,6 +31,7 @@
     "postcss-inline-media": "^1.4.0",
     "postcss-simple-vars": "^6.0.3",
     "rehype-katex-svelte": "^1.0.3",
+    "remark-definition-list": "^1.1.0",
     "remark-math": "^3"
   }
 }

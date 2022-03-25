@@ -9,8 +9,8 @@ const { name, tagline, skills, description, url, git, img } = p
   <header>
     <h2>{name}</h2>
     <!-- <h2>{#if url || git}🞂{/if}</h2> -->
-    {#if url}<a href={url}><img src="/static/icons/globe2.svg"></a>{/if}
-    {#if git}<a href={git}> <img src="/static/icons/github.svg"></a>{/if}
+    {#if url}<a href={url}><img src="/icons/globe2.svg" alt="globe"></a>{/if}
+    {#if git}<a href={git}> <img src="/icons/github.svg" alt="github"></a>{/if}
   </header>
   <h3>{tagline}</h3>
   <ul>

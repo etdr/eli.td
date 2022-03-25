@@ -3,7 +3,18 @@
 
 tl;dr I made this site.
 
-- Svelte
-- SvelteKit
-- PostCSS
-- 
+<!-- Svelte
+: I am new to Svelte
+
+SvelteKit
+: ..which is built on Vite
+
+PostCSS
+: me likey -->
+
+## I'm testing
+
+D3, for transitioning the gradiented bar
+
+
+[@rollup/plugin-yaml](https://github.com/rollup/plugins/tree/master/packages/yaml) (Vite-compatible)
