@@ -5,6 +5,7 @@
 
 - [![GitHub](/icons/github.svg) etdr](https://github.com/etdr)
 - [![LinkedIn](/icons/linkedin.svg) etdru](https://www.linkedin.com/in/etdru/)
+- [![Replit](/icons/replit.svg) @etd](https://replit.com/@etd)
 - [![Discord](/icons/discord.svg) etdr#3050](https://discord.com/channels/@me/910519796129468466)
 - [![Telegram](/icons/telegram.svg) @etdru](https://t.me/etdru)
 - [![Spotify](/icons/spotify.svg) dte.li](https://open.spotify.com/user/dte.li)

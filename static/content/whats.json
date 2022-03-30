@@ -60,6 +60,7 @@
   "wearer of masks",
   "open borders advocate",
   "inefficient computer",
+  "National Merit semifinalist",
 
   "curator",
   "collector",
@@ -91,5 +92,10 @@
   "driver",
   "dozer",
   "sleeper",
-  "firstborn"
+  "firstborn",
+
+  {
+    "asuffix": "bout",
+    "word": "6'3\" tall"
+  }
 ]

@@ -9,6 +9,7 @@ import { onDestroy, onMount } from 'svelte'
 const stopData = getStopData()
 
 let updateInterval
+let resizeListener
 
 onMount(() => {
 
@@ -31,11 +32,23 @@ onMount(() => {
 
   updateInterval = setInterval(update, 1000)
 
+
 })
 
 onDestroy(() => {
   clearInterval(updateInterval)
 })
+
+function handleResize () {
+  const hg = document.getElementById('hg')
+  if (innerWidth <= 780) {
+    hg.setAttribute('x2', '100%')
+    hg.setAttribute('y2', '0%')
+  } else {
+    hg.setAttribute('x2', '0%')
+    hg.setAttribute('y2', '100%')
+  }
+}
 
 // onMount(() => {
 //   sEls = [...document.getElementsByTagName('stop')]
@@ -51,6 +64,7 @@ onDestroy(() => {
 // })
 </script>
 
+<!-- <svelte:window on:resize={handleResize} /> -->
 
 
 <div id="colorbar">

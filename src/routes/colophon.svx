@@ -1,7 +1,7 @@
 
 # colophon
 
-tl;dr I made this site.
+tl;dr I made this site with
 
 <!-- Svelte
 : I am new to Svelte
@@ -12,9 +12,21 @@ SvelteKit
 PostCSS
 : me likey -->
 
-## I'm testing
 
-D3, for transitioning the gradiented bar
+- [Svelte](https://svelte.dev/)
+  - [SvelteKit](https://kit.svelte.dev/)
+- [CSS](https://www.w3.org/Style/CSS/) with grid (instead of flexbox for once)
+- [PostCSS](https://postcss.org/)
+  - [Autoprefixer](https://github.com/postcss/autoprefixer)
+  - [postcss-nested](https://github.com/postcss/postcss-nested)
+- [MDSveX](https://mdsvex.pngwn.io/)
+- [D3.js](https://d3js.org/)
+- [KaTeX](https://katex.org/)
+- other npm packages
+  - [jssha](https://www.npmjs.com/package/jssha)
+  - [@rollup/plugin-yaml](https://github.com/rollup/plugins/tree/master/packages/yaml) (Vite-compatible)
+- [MNIST as .jpg dataset](https://www.kaggle.com/datasets/scolianni/mnistasjpg)
+- [git](https://git-scm.com/)
+  - [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
-
-[@rollup/plugin-yaml](https://github.com/rollup/plugins/tree/master/packages/yaml) (Vite-compatible)
+and I am hosting it in a Docker container running on a server in my office-basement.

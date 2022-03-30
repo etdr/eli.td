@@ -25,11 +25,11 @@ body {
   margin: 0;
   display: grid;
   grid-template:
-    [pagetop headertop] "colorbar . main" 8rem [headerbottom]
-    [maintop] "colorbar sidestuff main" auto [mainbottom]
-    [footertop] "colorbar . footer" 6rem [footerbottom pagebottom]
+    [pagetop headertop] "colorbar . main righthand" 8rem [headerbottom]
+    [maintop] "colorbar sidestuff main righthand" auto [mainbottom]
+    [footertop] "colorbar . footer righthand" 6rem [footerbottom pagebottom]
       /
-    [pageleft cbleft] 2% [cbright sideleft] 20% [sideright mainleft] auto [mainright pageright];
+    [pageleft cbleft] 2% [cbright sideleft] 20% [sideright mainleft] 40rem [mainright rightleft] auto [rightright pageright];
   gap: 16px;
 
   min-height: 100vh;
@@ -41,7 +41,17 @@ body {
   color: var(--text-color);
 }
 
-
+@media $m {
+  body {
+    grid-template: 
+      [pagetop maintop] "colorbar main" min-content [mainbottom]
+      [sidetop] "colorbar sidestuff" auto [sidebottom]
+      [footertop] "colorbar footer" 6rem [footerbottom pagebottom]
+        /
+      [pageleft cbleft] 5% [cbright allleft] auto [allright pageright];
+    
+  }
+}
 
 
 

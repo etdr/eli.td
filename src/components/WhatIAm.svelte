@@ -7,7 +7,7 @@ import whats from '/static/content/whats.json'
 
 function prefix (word) {
   if (typeof word === 'object') {
-    return `${word.article} ${word.word}`
+    return `${word.asuffix} ${word.word}`
   }
   return ['a', 'e', 'i', 'o'].includes(word[0].toLowerCase())
     ? `n ${word}`
