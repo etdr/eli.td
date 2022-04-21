@@ -16,7 +16,10 @@ const config = {
       },
       plugins: [
         yaml()
-      ]
+      ],
+      // json: {
+      //   stringify: true
+      // }
     }
   },
 

@@ -3,7 +3,9 @@
 import { blur } from 'svelte/transition'
 import { onMount } from 'svelte'
 
-import whats from '/static/content/whats.json'
+import { assets } from '$app/paths'
+
+import whats from '../data/whats.json'
 
 function prefix (word) {
   if (typeof word === 'object') {

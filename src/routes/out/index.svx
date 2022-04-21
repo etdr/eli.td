@@ -2,23 +2,12 @@
 // @ts-ignore
 import { page } from '$app/stores'
 
-let suboutput = ''
-if ($page.url.pathname.includes('out')) {
-  suboutput = '/cats'
-}
+
 </script>
 
 
-# output
 
 
 
 
-
-
-
-
-<style lang="postcss">
-
-</style>
 

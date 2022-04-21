@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 // @ts-nocheck
 import { page } from '$app/stores'
 import { getContext } from 'svelte'
@@ -19,4 +19,4 @@ console.log($page)
     <Project {p} />
   {/each}
 {/if}
-
+ -->
