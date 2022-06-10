@@ -29,6 +29,6 @@ const config = {
     }),
     mdsvex(mdsvexConfig),
   ]
-};
+}
 
 export default config;
