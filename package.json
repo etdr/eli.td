@@ -2,15 +2,17 @@
   "name": "eli.td",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev --host",
-    "build": "svelte-kit build",
+    "dev": "vite dev",
+    "build": "vite build",
+    "sync": "svelte-kit sync",
     "package": "svelte-kit package",
-    "preview": "svelte-kit preview",
-    "prepare": "svelte-kit sync"
+    "preview": "vite preview",
+    "help": "svelte-kit --help"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
+    "@sveltejs/vite-plugin-svelte": "^1.0.1",
     "autoprefixer": "^10.4.2",
     "mdsvex": "^0.10.5",
     "postcss": "^8.4.5",
