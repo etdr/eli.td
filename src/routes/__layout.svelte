@@ -5,7 +5,7 @@ import { page } from '$app/stores'
 
 import '../app.css'
 
-import Colorbar from '../components/Colorbar.svelte'
+import Colorbar from '../components/ColorbarD3.svelte'
 </script>
 
 <Colorbar />

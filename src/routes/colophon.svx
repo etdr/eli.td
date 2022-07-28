@@ -20,7 +20,7 @@ PostCSS
   - [Autoprefixer](https://github.com/postcss/autoprefixer)
   - [postcss-nested](https://github.com/postcss/postcss-nested)
 - [MDSveX](https://mdsvex.pngwn.io/)
-- [D3.js](https://d3js.org/)
+- ~~[D3.js](https://d3js.org/)~~ now with pure CSS left-side colorbar
 - [KaTeX](https://katex.org/)
 - other npm packages
   - [jssha](https://www.npmjs.com/package/jssha)
