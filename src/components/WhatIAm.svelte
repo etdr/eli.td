@@ -33,5 +33,5 @@ onMount(() => {
 </script>
 
 {#key what}
-<span in:blur="{{delay: 300, duration: 500}}" out:blur>{what}.</span>
+<span in:blur|global="{{delay: 300, duration: 500}}" out:blur|global>{what}.</span>
 {/key}

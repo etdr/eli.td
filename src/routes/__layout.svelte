@@ -17,7 +17,7 @@ import Colorbar from '../components/ColorbarD3.svelte'
   <li>
     <a href="/about">about</a>
     {#if $page.url.pathname.includes('about')}
-      <ul transition:slide>
+      <ul transition:slide|global>
         <li><a href="/about/activities">activities</a></li>
         <li><a href="/about/beliefs">beliefs</a></li>
       </ul>
@@ -26,7 +26,7 @@ import Colorbar from '../components/ColorbarD3.svelte'
   <li>
     <a href="/out">outputs</a>
     {#if $page.url.pathname.includes('/out')}
-      <ul transition:slide>
+      <ul transition:slide|global>
         <li><a href="/out/sites">sites</a></li>
         <li><a href="/out/data">data</a></li>
         <li><a href="/out/thesis">thesis</a></li>
