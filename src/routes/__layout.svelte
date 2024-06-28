@@ -19,7 +19,7 @@ import Colorbar from '../components/ColorbarD3.svelte'
     {#if $page.url.pathname.includes('about')}
       <ul transition:slide|global>
         <li><a href="/about/activities">activities</a></li>
-        <li><a href="/about/beliefs">beliefs</a></li>
+        <!-- <li><a href="/about/beliefs">beliefs</a></li> -->
       </ul>
     {/if}
   </li>
