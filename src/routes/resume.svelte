@@ -7,7 +7,7 @@ import resString from '/static/res-yaml/res.yaml?raw'
 
 </script>
 
-# résumé
+<h1>résumé</h1>
 
 <pre class="language-yaml"><code class="language-yaml">{resString}</code></pre>
 

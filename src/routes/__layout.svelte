@@ -1,4 +1,6 @@
 <script>
+export const prerender = true;
+
 import { slide } from 'svelte/transition'
 // @ts-ignore
 import { page } from '$app/stores'

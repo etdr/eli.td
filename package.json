@@ -10,31 +10,30 @@
     "help": "svelte-kit --help"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "next",
-    "@sveltejs/vite-plugin-svelte": "^3.1.1",
-    "autoprefixer": "^10.4.19",
-    "mdsvex": "^0.10.6",
-    "postcss": "^8.4.38",
+    "@sveltejs/adapter-auto": "^4.0.0",
+    "@sveltejs/kit": "^2.17.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
     "postcss-load-config": "^3.1.4",
     "postcss-nested": "^5.0.6",
-    "svelte": "^4.2.18",
+    "svelte": "^5.19.9",
     "svelte-preprocess": "^5.1.4"
   },
   "type": "module",
   "dependencies": {
-    "@rollup/plugin-yaml": "^3.1.0",
     "@sveltejs/adapter-node": "^2.1.2",
-    "@sveltejs/adapter-static": "^3.0.2",
+    "@sveltejs/adapter-static": "^3.0.8",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "animejs": "^3.2.2",
     "d3": "^7.9.0",
     "jssha": "^3.3.1",
     "katex": "^0.15.6",
-    "postcss-inline-media": "^1.4.0",
+    "postcss-inline-media": "^1.5.0",
     "postcss-simple-vars": "^6.0.3",
     "rehype-katex-svelte": "^1.2.0",
     "remark-definition-list": "^1.2.0",
     "remark-math": "^3.0.1",
-    "yaml": "^2.4.5"
+    "vite": "^6.1.0",
+    "yaml": "^2.7.0"
   }
 }
