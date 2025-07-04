@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 import { blur } from 'svelte/transition'
-import { onMount } from 'svelte'
+import { onMount, onDestroy } from 'svelte'
 
 import { assets } from '$app/paths'
 
@@ -21,17 +21,24 @@ function getRandomWhat () {
 }
 
 let what = $state([])
+let interval
 
 onMount(() => {
   what = getRandomWhat()
 
-  setInterval(() => {
+  interval = setInterval(() => {
     what = getRandomWhat()
   }, 2000)
+})
+
+onDestroy(() => {
+  clearInterval(interval)
+  console.log('clearing')
 })
 
 </script>
 
 {#key what}
-<span in:blur|global="{{delay: 300, duration: 500}}" out:blur|global>{what}.</span>
+<!-- <span in:blur|global="{{delay: 300, duration: 500}}" out:blur|global>{what}.</span> -->
+ <span>{what}.</span>
 {/key}
