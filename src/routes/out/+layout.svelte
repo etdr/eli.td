@@ -1,7 +1,7 @@
 <script>
 import { setContext } from 'svelte'
 //@ts-nocheck
-import { page } from '$app/stores'
+import { page } from '$app/state'
 // //@ts-nocheck
 // import { assets } from '$app/paths'
 // import { parse } from 'yaml'

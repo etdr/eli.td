@@ -27,6 +27,6 @@ const urls = digits.map(digitToRandUrl)
 <img alt="{d}" src="{urls[i]}">
 {/each} -->
 
-<h2>(<img alt="{digits[0]}" src="{urls[0]}"><img alt="{digits[1]}" src="{urls[1]}"><img alt="{digits[2]}" src="{urls[2]}">) <img alt="{digits[3]}" src="{urls[3]}"><img alt="{digits[4]}" src="{urls[4]}"><img alt="{digits[5]}" src="{urls[5]}">--<img alt="{digits[6]}" src="{urls[6]}"><img alt="{digits[7]}" src="{urls[7]}"><img alt="{digits[8]}" src="{urls[8]}"><img alt="{digits[9]}" src="{urls[9]}"></h2>
+<h2>(<img alt="{digits[0]}" src="{urls[0]}"><img alt="{digits[1]}" src="{urls[1]}"><img alt="{digits[2]}" src="{urls[2]}">) <img alt="{digits[3]}" src="{urls[3]}"><img alt="{digits[4]}" src="{urls[4]}"><img alt="{digits[5]}" src="{urls[5]}">–<img alt="{digits[6]}" src="{urls[6]}"><img alt="{digits[7]}" src="{urls[7]}"><img alt="{digits[8]}" src="{urls[8]}"><img alt="{digits[9]}" src="{urls[9]}"></h2>
 
 

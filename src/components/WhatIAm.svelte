@@ -20,7 +20,7 @@ function getRandomWhat () {
   return prefix(whats[Math.floor(Math.random() * whats.length)])
 }
 
-let what = []
+let what = $state([])
 
 onMount(() => {
   what = getRandomWhat()

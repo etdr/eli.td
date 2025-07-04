@@ -34,5 +34,4 @@
 	</li>
 </ul>
 
-<p>and I am hosting it in a Docker container running on a server in my
-office-basement.</p>
+<p>and I am hosting it in a Docker container running on a server in my office-basement.</p>

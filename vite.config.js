@@ -1,12 +1,9 @@
 import { sveltekit } from '@sveltejs/kit/vite'
-import yaml from '@rollup/plugin-yaml'
+import { defineConfig } from 'vite'
 
-/** @type {import('vite').UserConfig} */
-const config = {
+
+export default defineConfig({
 	plugins: [
-    sveltekit(),
-    yaml()
+    sveltekit()
   ]
-};
-
-export default config;
+})

@@ -1,5 +1,5 @@
 <script>
-export let p
+let { p } = $props()
 
 const { name, tagline, skills, description, url, git, img } = p
 

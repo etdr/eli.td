@@ -6,7 +6,7 @@
 import getStopData from '$lib/huesha'
 import { onDestroy, onMount } from 'svelte'
 
-let stopData = getStopData()
+let stopData = $state(getStopData())
 
 let updateInterval
 // let resizeListener
