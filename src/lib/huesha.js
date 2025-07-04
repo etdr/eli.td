@@ -11,11 +11,10 @@ export default function getStops () {
   const digest = getTimeDigest()
 
   return digest.match(/.{8}/g)
-          .map(s => [
-            '#' + s.slice(0, 6), 
-            (parseInt(s.slice(6), 16) / 2.56)
-              .toString() + '%'
-          ])
-          .sort((s0, s1) => parseFloat(s0[1].slice(0, -1)) - parseFloat(s1[1].slice(0, -1)))
-                   
+          .map((s, i) => ({
+            id: i, // Add a stable ID
+            color: '#' + s.slice(0, 6), 
+            offset: parseInt(s.slice(6), 16) / 256
+          }))
+          .sort((a, b) => a.offset - b.offset) // Sort for the renderer
 }
