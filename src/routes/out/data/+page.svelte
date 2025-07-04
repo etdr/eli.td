@@ -2,7 +2,7 @@
 //@ts-nocheck
 import { getContext } from 'svelte'
 
-import Project from '../../components/out/Project.svelte'
+import Project from '../../../components/out/Project.svelte'
 
 const data = getContext('out').out.data
 

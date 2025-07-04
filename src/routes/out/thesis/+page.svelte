@@ -1,5 +1,5 @@
 
-<h1>out<span class="non-b">/thesis</span></h1>
+<!-- <h1>out<span class="non-b">/thesis</span></h1> -->
 
 <p>My master’s thesis was written in 2015 and 2016, and was successfully defended on July 4th of 2016. It outlines the idea of a syntactically extensible language and a possible parsing algorithm for tokenization and parsing using tree transducers.</p>
 <p>Here’s the abstract:</p>

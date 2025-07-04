@@ -27,13 +27,13 @@ import Colorbar from '../components/ColorbarD3.svelte'
     <a href="/out">outputs</a>
     {#if $page.url.pathname.includes('/out')}
       <ul transition:slide|global>
-        <li><a href="/out/sites">sites</a></li>
+        <!-- <li><a href="/out/sites">sites</a></li> -->
         <li><a href="/out/data">data</a></li>
         <li><a href="/out/thesis">thesis</a></li>
       </ul>
     {/if}
   </li>
-  <li><a href="/resume">résumé</a></li>
+  <!-- <li><a href="/resume">résumé</a></li> -->
   <li><a href="/profiles">profiles</a></li>
   <li><a href="/contact">contact</a></li>
 </ul>
