@@ -1,15 +1,17 @@
 <script>
 import { setContext } from 'svelte'
 //@ts-nocheck
-import { page } from '$app/state'
+import { page } from '$app/stores'
 // //@ts-nocheck
 // import { assets } from '$app/paths'
-// import { parse } from 'yaml'
+import { parse } from 'yaml'
 
 
 // const out = await import(`${assets}/texts/out.yaml`)
 //@ts-ignore
-import out from '../../data/out.yaml'
+import outYaml from '../../data/out.yaml?raw'
+
+const out = parse(outYaml)
 
 setContext('out', out)
 
