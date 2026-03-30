@@ -1,6 +1,6 @@
 
 <script>
-import resString from '/static/res-yaml/res.yaml?raw'
+// import resString from '/static/res-yaml/res.yaml?raw'
 
 // import { highlight } from 'prismjs'
 // import yamlize from 'prismjs/components/prism-yaml.min.js'
@@ -9,7 +9,7 @@ import resString from '/static/res-yaml/res.yaml?raw'
 
 <h1>résumé</h1>
 
-<pre class="language-yaml"><code class="language-yaml">{resString}</code></pre>
+<!-- <pre class="language-yaml"><code class="language-yaml">{resString}</code></pre> -->
 
 
 
