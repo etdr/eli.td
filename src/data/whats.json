@@ -32,6 +32,7 @@
   "adept googler",
   "problem tackler",
   "large dude",
+  "mid-life extravert",
 
   "code author",
   "color enthusiast",
@@ -43,10 +44,10 @@
   "thesis author",
   "puzzle solver",
   "architect (broadly construed)",
-  "aspiring Dutch speaker",
+  "aspiring polyglot",
   "4th-grade spelling bee champion",
   "digital organizer",
-  "JavaScript educator",
+  "JavaScript Stockholm Syndrome victim",
   "functional programming proponent",
   "mild LISP fanboy",
   "Linux apologist",
@@ -54,7 +55,7 @@
   "non-specific guru",
   "subject and object",
   "honest appraiser",
-  "tweet author",
+  "former tweet author",
   "fly-by-night comedian",
   "walktaker",
   "playable character",
@@ -94,9 +95,14 @@
   "dozer",
   "sleeper",
   "firstborn",
+  "artist",
 
   {
     "asuffix": "bout",
     "word": "6'3\" tall"
+  },
+  {
+    "asuffix": "n",
+    "word": "unapologetic 4 (Enneagrammatically)"
   }
 ]

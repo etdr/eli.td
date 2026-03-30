@@ -1,11 +1,23 @@
 <script>
 import { slide } from 'svelte/transition'
-// @ts-ignore
-import { page } from '$app/stores'
+import { page } from '$app/state'
+import { onNavigate } from '$app/navigation'
 
 import '../app.css'
 
 import Colorbar from '../components/ColorbarD3.svelte'
+
+let { children } = $props()
+
+onNavigate((navigation) => {
+  if (!document.startViewTransition) return
+  return new Promise((resolve) => {
+    document.startViewTransition(async () => {
+      resolve()
+      await navigation.complete
+    })
+  })
+})
 </script>
 
 <Colorbar />
@@ -16,7 +28,7 @@ import Colorbar from '../components/ColorbarD3.svelte'
   <li><a href="/">etd</a></li>
   <li>
     <a href="/about">about</a>
-    {#if $page.url.pathname.includes('about')}
+    {#if page.url.pathname.includes('about')}
       <ul transition:slide|global>
         <li><a href="/about/activities">activities</a></li>
         <!-- <li><a href="/about/beliefs">beliefs</a></li> -->
@@ -25,7 +37,7 @@ import Colorbar from '../components/ColorbarD3.svelte'
   </li>
   <li>
     <a href="/out">outputs</a>
-    {#if $page.url.pathname.includes('/out')}
+    {#if page.url.pathname.includes('/out')}
       <ul transition:slide|global>
         <!-- <li><a href="/out/sites">sites</a></li> -->
         <li><a href="/out/data">data</a></li>
@@ -39,25 +51,17 @@ import Colorbar from '../components/ColorbarD3.svelte'
 </ul>
 
 <main>
-  <slot />
+  {@render children()}
 </main>
 
 
 <footer>
-  ©2022 Eli T. Drumm 🞰 <a href="/colophon">about this site</a>
+  ©2026 Eli T. Drumm 🞰 <a href="/colophon">about this site</a>
 </footer>
 
 
 
-<style lang="postcss">
-
-:global(:root) {
-  /* breakpoint variables */
-  $x: (max-width: 1240px);
-  $l: (max-width: 1024px);
-  $m: (max-width: 780px);
-  $s: (max-width: 660px);
-}
+<style>
 
 div#leftside {
   grid-column-start: sideleft;
@@ -67,7 +71,7 @@ div#leftside {
   width: 100%;
   height: 100%;
 
-  background-color: var(--background-color);
+  background-color: var(--text-color);
 }
 
 ul {
@@ -97,7 +101,7 @@ ul {
     } */
     
     a {
-      color: var(--text-color);
+      color: var(--background-color);
       &:hover {
         &::before {
           font-family: 'Noto Sans Symbols 2', monospace;
@@ -124,7 +128,7 @@ ul {
     ul {
       margin-top: 0.2rem;
       margin-bottom: 0.8rem;
-      color: var(--text-color);
+      color: var(--background-color);
 
       li {
         font-size: 1.2rem;
@@ -155,7 +159,39 @@ main {
 footer {
   grid-area: footer;
   align-self: center;
+  padding-left: 2rem;
+
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
 }
 
+@media (max-width: 780px) {
+  div#leftside {
+    display: none;
+  }
+
+  ul {
+    grid-column: cbright / -1;
+    background-color: var(--text-color);
+    padding: 1rem;
+    text-align: right;
+    margin: 0;
+  }
+
+  footer {
+    grid-column: cbright / -1;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 0 1rem 2rem;
+    text-align: right;
+    align-self: end;
+
+    a {
+      color: var(--link-color);
+    }
+  }
+}
 
 </style>

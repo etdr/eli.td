@@ -3,8 +3,8 @@
 <ul>
   <li><a href="https://github.com/etdr"><img src="/icons/github.svg" alt="GitHub" /> etdr</a></li>
   <li><a href="https://www.linkedin.com/in/etdru/"><img src="/icons/linkedin.svg" alt="LinkedIn" /> etdru</a></li>
-  <li><a href="https://replit.com/@etd"><img src="/icons/replit.svg" alt="Replit" /> <span class="citation" data-cites="etd">@etd</span></a></li>
-  <li><a href="https://discord.com/channels/@me/910519796129468466"><img src="/icons/discord.svg" alt="Discord" /> etdr#3050</a></li>
+  <!-- <li><a href="https://replit.com/@etd"><img src="/icons/replit.svg" alt="Replit" /> <span class="citation" data-cites="etd">@etd</span></a></li> -->
+  <li><a href="https://discord.com/users/524413678456668163"><img src="/icons/discord.svg" alt="Discord" /> etdr</a></li>
   <li><a href="https://t.me/etdru"><img src="/icons/telegram.svg" alt="Telegram" /> <span class="citation" data-cites="etdru">@etdru</span></a></li>
   <li><a href="https://open.spotify.com/user/dte.li"><img src="/icons/spotify.svg" alt="Spotify" /> dte.li</a></li>
   <li><a href="https://www.last.fm/user/eliium"><img src="/icons/lastfm.svg" alt="last.fm" /> eliium</a></li>
@@ -16,7 +16,7 @@
 </ul>
 
 
-<style lang="postcss">
+<style>
 ul {
   list-style-type: none;
   

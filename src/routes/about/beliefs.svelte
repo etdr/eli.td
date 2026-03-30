@@ -7,7 +7,7 @@
 <p>I used to think I wasn’t spiritual, but I think I had the wrong conception of the idea and I’ve come to believe that I am more spiritual as an atheist than I ever was as anything else.</p>
 
 <h2>Economic</h2>
-<p>I’m some form of a leftist. I think that the complaint often applied to communism—“it works in theory but not in practice”—applies even more so to capitalism. Capitalism, particularly when it’s anything but strictly regulated, is really nifty idea! Like blockchain, though, it should stay in academia; when played out, it is deeply inhumane and not grounded in fundamental realities. Of course, that by itself doesn’t mean leftist systems are inherently humane or work better, but I tend to think there’s a happy medium that tilts strongly towards the left.</p>
+<p>I’m some form of a leftist. I think that the complaint often applied to communism—“it works in theory but not in practice”—applies just much to capitalism. Capitalism, particularly when it’s anything but strictly regulated, is really nifty idea! Like blockchain, though, it should stay in academia; when played out, it is deeply inhumane and not grounded in fundamental realities. Of course, that by itself doesn’t mean leftist systems are inherently humane or work better, but I tend to think there’s a happy medium that tilts strongly towards the left.</p>
 <p>I’m not going to weigh in on how we get there at the moment.</p>
 
 <h2>Values</h2>
@@ -24,8 +24,8 @@
 <h3>What else do I value?</h3>
 
 <ul>
-	<li>Technological progress</li>
 	<li>Romantic partnership</li>
+	<li>Technological progress</li>
 	<li>Novelty</li>
 </ul>
 
@@ -42,8 +42,8 @@
 <ul>
 	<li>It is our moral obligation to extend life indefinitely (and we are failing miserably at this).</li>
 	<li>Corporations are not people. I don’t know what corporations are.</li>
-	<li>Drugs are good (hallucinogens and stimulants especially), although they can be misused.</li>
-	<li>True beauty comes from innovation, which is mostly the domain of humanity (so far).</li>
+	<li>Drugs can be good (hallucinogens and stimulants especially), although of course they can also be misused.</li>
+	<li>True beauty comes from innovation, which is mostly the domain of humanity (so far). However there is no reason in principle that this will always be the case, and many of us will likely live to see truly beautiful, innovative intelligences that aren't human at all.</li>
 	<li>Dogs are pure, but they aren’t deep. Purity is a nice thing to have around though.</li>
 	<li>The idea of fault/blame is a convenient abstraction for something that doesn’t really exist.</li>
 	<li>We are probably alone in the cosmos, at least for any reasonable timescales.</li>

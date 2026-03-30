@@ -22,7 +22,7 @@ const { name, tagline, skills, description, url, git, img } = p
 </section>
 
 
-<style lang="postcss">
+<style>
 section {
   margin: 0 0 3rem;
   padding-left: 1rem;

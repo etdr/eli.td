@@ -1,26 +1,21 @@
 <script>
-import { setContext } from 'svelte'
-//@ts-nocheck
-import { page } from '$app/stores'
-// //@ts-nocheck
-// import { assets } from '$app/paths'
-import { parse } from 'yaml'
+import { setContext } from "svelte";
+import { page } from "$app/state";
+import { parse } from "yaml";
 
+let { children } = $props();
 
-// const out = await import(`${assets}/texts/out.yaml`)
 //@ts-ignore
-import outYaml from '../../data/out.yaml?raw'
+import outYaml from "../../data/out.yaml?raw";
 
-const out = parse(outYaml)
+const out = parse(outYaml);
 
-setContext('out', out)
+setContext("out", out);
 
-let slashSub, subout
-$: subout = $page.url.pathname.split('/').at(-1)
-$: slashSub = subout !== 'out' ? `/${subout}` : ''
-
+let subout = $derived(page.url.pathname.split("/").at(-1));
+let slashSub = $derived(subout !== "out" ? `/${subout}` : "");
 </script>
 
 <h1>out<span class="non-b">{slashSub}</span></h1>
 
-<slot />
+{@render children()}

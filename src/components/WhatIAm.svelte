@@ -1,44 +1,54 @@
 <script>
-// @ts-nocheck
-import { blur } from 'svelte/transition'
-import { onMount, onDestroy } from 'svelte'
+import { onMount, onDestroy } from "svelte";
 
-import { assets } from '$app/paths'
+import whats from "../data/whats.json";
 
-import whats from '../data/whats.json'
-
-function prefix (word) {
-  if (typeof word === 'object') {
-    return `${word.asuffix} ${word.word}`
+function prefix(word) {
+  if (typeof word === "object") {
+    return `${word.asuffix} ${word.word}`;
   }
-  return ['a', 'e', 'i', 'o'].includes(word[0].toLowerCase())
+  return ["a", "e", "i", "o"].includes(word[0].toLowerCase())
     ? `n ${word}`
-    : ` ${word}`
+    : ` ${word}`;
 }
 
-function getRandomWhat () {
-  return prefix(whats[Math.floor(Math.random() * whats.length)])
+function getRandomWhat() {
+  return prefix(whats[Math.floor(Math.random() * whats.length)]);
 }
 
-let what = $state([])
-let interval
+let what = $state([]);
+let visible = $state(true);
+let interval;
 
 onMount(() => {
-  what = getRandomWhat()
+  what = getRandomWhat();
 
   interval = setInterval(() => {
-    what = getRandomWhat()
-  }, 2000)
-})
+    visible = false;
+    setTimeout(() => {
+      what = getRandomWhat();
+      visible = true;
+    }, 400);
+  }, 3600);
+});
 
 onDestroy(() => {
-  clearInterval(interval)
-  console.log('clearing')
-})
-
+  clearInterval(interval);
+});
 </script>
 
-{#key what}
-<!-- <span in:blur|global="{{delay: 300, duration: 500}}" out:blur|global>{what}.</span> -->
- <span>{what}.</span>
-{/key}
+<span class="what" class:visible>{what}.</span>
+
+<style>
+.what {
+  opacity: 0;
+  filter: blur(4px);
+  transition:
+    opacity 0.4s ease,
+    filter 0.4s ease;
+}
+.what.visible {
+  opacity: 1;
+  filter: blur(0px);
+}
+</style>

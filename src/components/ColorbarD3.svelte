@@ -1,101 +1,87 @@
 <script>
-// @ts-nocheck
 import getStopData from '$lib/huesha'
-import { onDestroy, onMount } from 'svelte'
-import { tweened } from 'svelte/motion'
-import { cubicOut } from 'svelte/easing'
+import { onMount, onDestroy } from 'svelte'
 
-// Helper to parse a hex color string to an [r, g, b] array
-function parseHex(hex) {
-    const r = parseInt(hex.slice(1, 3), 16);
-    const g = parseInt(hex.slice(3, 5), 16);
-    const b = parseInt(hex.slice(5, 7), 16);
-    return [r, g, b];
+const N = 16
+const DURATION = '1s'
+const EASING = 'cubic-bezier(0.33, 1, 0.68, 1)' // ~cubicOut
+
+const gradient = `linear-gradient(to bottom, ${
+  Array.from({length: N}, (_, i) => `var(--c${i}) var(--o${i})`).join(', ')
+})`
+
+const transition = Array.from({length: N}, (_, i) =>
+  `--c${i} ${DURATION} ${EASING}, --o${i} ${DURATION} ${EASING}`
+).join(', ')
+
+let el
+let interval
+
+function applyStops() {
+  const stops = getStopData()
+  for (let i = 0; i < stops.length; i++) {
+    el.style.setProperty(`--c${i}`, stops[i].color)
+    el.style.setProperty(`--o${i}`, `${(stops[i].offset * 100).toFixed(1)}%`)
+  }
 }
-
-// Helper to format an [r, g, b] array back to a hex string
-function formatHex(rgb) {
-    const r = Math.round(rgb[0]).toString(16).padStart(2, '0');
-    const g = Math.round(rgb[1]).toString(16).padStart(2, '0');
-    const b = Math.round(rgb[2]).toString(16).padStart(2, '0');
-    return `#${r}${g}${b}`;
-}
-
-// The main interpolator for the tweened store
-function interpolateStops(a, b) {
-    // Create a map of the target array's stops by their stable ID
-    const b_map = new Map(b.map(stop => [stop.id, stop]));
-
-    // Create interpolators for each stop in the source array
-    const interpolators = a.map(a_stop => {
-        const b_stop = b_map.get(a_stop.id); // Find the matching stop in the target array
-
-        const a_offset = a_stop.offset;
-        const b_offset = b_stop.offset;
-        
-        const a_color_rgb = parseHex(a_stop.color);
-        const b_color_rgb = parseHex(b_stop.color);
-
-        return (t) => {
-            const offset = a_offset * (1 - t) + b_offset * t;
-            const color_rgb = [
-                a_color_rgb[0] * (1 - t) + b_color_rgb[0] * t, // R
-                a_color_rgb[1] * (1 - t) + b_color_rgb[1] * t, // G
-                a_color_rgb[2] * (1 - t) + b_color_rgb[2] * t  // B
-            ];
-            
-            return {
-                id: a_stop.id, // Keep the ID
-                offset: offset,
-                color: formatHex(color_rgb)
-            };
-        };
-    });
-
-    return (t) => {
-        return interpolators.map(fn => fn(t)).sort((x, y) => x.offset - y.offset);
-    };
-}
-
-const stopData = tweened(getStopData(), {
-  duration: 1000,
-  easing: cubicOut,
-  interpolate: interpolateStops
-})
-
-let updateInterval
 
 onMount(() => {
-  const update = () => {
-    stopData.set(getStopData())
+  for (let i = 0; i < N; i++) {
+    try {
+      CSS.registerProperty({ name: `--c${i}`, syntax: '<color>', inherits: false, initialValue: '#000000' })
+      CSS.registerProperty({ name: `--o${i}`, syntax: '<percentage>', inherits: false, initialValue: '0%' })
+    } catch (e) {
+      // Already registered (e.g. HMR reload)
+    }
   }
-  updateInterval = setInterval(update, 1000)
+
+  applyStops()
+  interval = setInterval(applyStops, 1000)
 })
 
 onDestroy(() => {
-  clearInterval(updateInterval)
+  clearInterval(interval)
 })
 </script>
 
-<div id="colorbar">
-  <svg height="100%" width="100%">
-    <defs>
-      <linearGradient id="hg" x1="0%" x2="0%" y1="0%" y2="100%">
-        {#each $stopData as s, i (i)}
-          <stop 
-            offset={s.offset} 
-            stop-color={s.color}
-          />
-        {/each}
-      </linearGradient>
-    </defs>
-
-    <rect id="hgrect" x="0" y="0" height="100%" width="100%" fill="url('#hg')" />
-  </svg>
+<div id="colorbar" bind:this={el}
+  style="background: {gradient}; transition: {transition};">
 </div>
 
-<style lang="postcss">
+<style >
 #colorbar {
-  grid-area: colorbar;
+  grid-column-start: cbleft;
+  grid-column-end: sideright;
+  grid-row-start: pagetop;
+  grid-row-end: pagebottom;
+  --_fade: linear-gradient(to right,
+    black 10%,
+    rgba(0,0,0,0.98) 14%,
+    rgba(0,0,0,0.94) 18%,
+    rgba(0,0,0,0.88) 22%,
+    rgba(0,0,0,0.80) 26%,
+    rgba(0,0,0,0.71) 30%,
+    rgba(0,0,0,0.61) 34%,
+    rgba(0,0,0,0.50) 38%,
+    rgba(0,0,0,0.39) 42%,
+    rgba(0,0,0,0.29) 46%,
+    rgba(0,0,0,0.20) 50%,
+    rgba(0,0,0,0.13) 54%,
+    rgba(0,0,0,0.07) 58%,
+    rgba(0,0,0,0.03) 62%,
+    transparent 66%
+  );
+  mask-image: var(--_fade);
+  -webkit-mask-image: var(--_fade);
+  pointer-events: none;
+}
+
+@media (max-width: 780px) {
+  #colorbar {
+    grid-column: cbleft / cbright;
+    grid-row: pagetop / pagebottom;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
 }
 </style>
