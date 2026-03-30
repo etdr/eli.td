@@ -11,6 +11,7 @@
     "@sveltejs/adapter-auto": "^7.0.1",
     "@sveltejs/kit": "^2.55.0",
     "svelte": "^5.55.1",
+    "svelte-adapter-bun": "^1.0.1",
     "svelte-preprocess": "^6.0.3",
     "vite-plugin-devtools-json": "^1.0.0"
   },
