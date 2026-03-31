@@ -37,9 +37,9 @@ body {
     gap: 0;
     background: var(--text-color);
     grid-template:
-      [pagetop maintop] "colorbar main" min-content [mainbottom]
+      [pagetop maintop] "colorbar main" 1fr [mainbottom]
       [sidetop] "colorbar sidestuff" auto [sidebottom]
-      [footertop] "colorbar footer" 1fr [footerbottom pagebottom] /
+      [footertop] "colorbar footer" auto [footerbottom pagebottom] /
       [pageleft cbleft] 5% [cbright allleft] auto [allright pageright];
   }
 
