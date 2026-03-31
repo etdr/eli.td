@@ -56,7 +56,7 @@ onNavigate((navigation) => {
 
 
 <footer>
-  ©2026 Eli T. Drumm&emsp;<svg class="star" viewBox="0 0 520 530" width="1em" height="1em" style="transform: translateY(3px)"><path d="m207.3 65.7 240.3 94.5-383.6 248.1zm-15.8-38.4c-.4 0-.8.2-.9.6l-190.5 455.4c-.2.5 0 1.1.5 1.3.1.1.3.1.4.1.2 0 .4-.1.5-.2l510-329.8c.5-.3.6-.9.3-1.4-.1-.2-.3-.3-.5-.4l-319.4-125.6c-.1 0-.3 0-.4 0z" fill="black"/></svg>&emsp;<a href="/colophon">about this site</a>
+  ©2026 Eli T. Drumm&emsp;<svg class="star" viewBox="0 0 520 530" width="1em" height="1em" style="transform: translateY(3px)"><path d="m207.3 65.7 240.3 94.5-383.6 248.1zm-15.8-38.4c-.4 0-.8.2-.9.6l-190.5 455.4c-.2.5 0 1.1.5 1.3.1.1.3.1.4.1.2 0 .4-.1.5-.2l510-329.8c.5-.3.6-.9.3-1.4-.1-.2-.3-.3-.5-.4l-319.4-125.6c-.1 0-.3 0-.4 0z" fill="currentColor"/></svg>&emsp;<a href="/colophon">about this site</a>
 </footer>
 
 
