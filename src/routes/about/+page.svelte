@@ -30,7 +30,7 @@ setInterval(() => { kAgeHTML = getKatexifiedAge() }, 500)
 
 <p>As an undergraduate I studied cognitive science and philosophy of science at Indiana University (Bloomington) from '07 through '011. Following this, from mid-2013 to early '016 I lived in the Netherlands earning a <a href="https://msclogic.illc.uva.nl/" target="_blank">MSc in Logic</a> from the University of Amsterdam.</p>
 
-<p>Since graduating from my master's program I've more or less spent the time around Indianapolis teaching programming and trying to work out what my next steps will be.</p>
+<p>Since graduating from my master's program (a decade ago, wow) I've more or less spent the time around Indianapolis. I currently work at a public library.</p>
 
 <p>I also have a dog named Shannon (after <a href="https://en.wikipedia.org/wiki/Claude_Shannon" target="_blank">Claude</a>).</p>
 

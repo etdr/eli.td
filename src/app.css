@@ -46,6 +46,7 @@ body {
   main {
     background: var(--background-color);
     padding-bottom: 6rem;
+    padding-right: 1rem;
   }
 }
 
