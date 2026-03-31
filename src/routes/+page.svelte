@@ -22,6 +22,14 @@ const shirt = shirts[Math.floor(Math.random() * shirts.length)];
 
 img {
   height: 40rem;
+  max-width: 100%;
+  object-fit: contain;
   margin: 0 2rem;
+}
+
+@media (max-width: 780px) {
+  img {
+    margin: 0;
+  }
 }
 </style>

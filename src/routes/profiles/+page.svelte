@@ -22,15 +22,15 @@ ul {
   
   & li {
     margin: 2rem 0;
-    font-size: 3rem;
-    
+    font-size: clamp(1.4rem, 1rem + 1.2vw, 3rem);
+
     &:first-child {
       margin: 0 0 2rem;
     }
 
     & a {
       height: 100px;
-    
+
       display: flex;
       align-items: center;
     }
@@ -38,8 +38,8 @@ ul {
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: clamp(48px, 10vw, 100px);
+  height: clamp(48px, 10vw, 100px);
   margin: 0 1rem 0 0;
 }
 </style>
