@@ -4,7 +4,7 @@
 :root {
   box-sizing: border-box;
 
-  font-size: clamp(1.125rem, 0.95rem + 0.5vw, 1.375rem);
+  font-size: clamp(1.25rem, 1rem + 0.5vw, 1.375rem);
 
   --background-color: #f2f2f2;
 
